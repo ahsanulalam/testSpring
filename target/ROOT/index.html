@@ -59,7 +59,7 @@
 
 			// Random Person AJAX Request
 			$('#randomPerson').click(function() {
-				$.getJSON('http://192.168.1.229:8080/api/person/random', function(person) {
+				$.getJSON('http://springrest.cleverapps.io/api/person/random', function(person) {
 					$('#personResponse').text(person.name + ', age ' + person.age);
 				});
 			});
@@ -69,7 +69,7 @@
 				var personId = +$('#personId').val();
 				if(!validatePersonId(personId))
 					return false;
-				$.get('http://192.168.1.229:8080/api/person/' + personId, function(person) {
+				$.get('http://springrest.cleverapps.io/api/person/' + personId, function(person) {
 					$('#personIdResponse').text(person.name + ', age ' + person.age);
 				});
 				e.preventDefault(); // prevent actual form submit
@@ -77,14 +77,14 @@
 
 			// Save Person AJAX Form Submit
 			$('#randomPerson').click(function() {
-				$.getJSON('http://192.168.1.229:8080/api/person/', function(person) {
+				$.getJSON('http://springrest.cleverapps.io/api/person/', function(person) {
 					$('#personResponse').text(person.name + ', age ' + person.age);
 				});
 			});
 
 			$('#newPersonForm').submit(function(e) {
 				// will pass the form date using the jQuery serialize function
-				$.post('http://192.168.1.229:8080/api/person', $(this).serialize(), function(response) {
+				$.post('http://springrest.cleverapps.io/api/person', $(this).serialize(), function(response) {
 					$('#personFormResponse').text(response);
 				});
 
