@@ -16,6 +16,7 @@
           <string>WEB-INF/lib/spring-expression-3.1.1.RELEASE.jar</string>
           <string>WEB-INF/lib/spring-core-3.1.1.RELEASE.jar</string>
           <string>WEB-INF/lib/aopalliance-1.0.jar</string>
+          <string>WEB-INF/lib/jackson-core-asl-1.9.12.jar</string>
           <string>WEB-INF/lib/spring-webmvc-3.1.1.RELEASE.jar</string>
           <string>WEB-INF/lib/spring-beans-3.1.1.RELEASE.jar</string>
           <string>WEB-INF/lib/spring-web-3.1.1.RELEASE.jar</string>
@@ -104,6 +105,18 @@
         <optional>false</optional>
       </dependency>
       <targetFileName>aopalliance-1.0.jar</targetFileName>
+    </org.apache.maven.plugin.war.util.DependencyInfo>
+    <org.apache.maven.plugin.war.util.DependencyInfo>
+      <dependency>
+        <groupId>org.codehaus.jackson</groupId>
+        <artifactId>jackson-core-asl</artifactId>
+        <version>1.9.12</version>
+        <type>jar</type>
+        <scope>compile</scope>
+        <exclusions/>
+        <optional>false</optional>
+      </dependency>
+      <targetFileName>jackson-core-asl-1.9.12.jar</targetFileName>
     </org.apache.maven.plugin.war.util.DependencyInfo>
     <org.apache.maven.plugin.war.util.DependencyInfo>
       <dependency>
@@ -197,12 +210,7 @@
         <version>1.9.12</version>
         <type>jar</type>
         <scope>compile</scope>
-        <exclusions>
-          <org.apache.maven.model.Exclusion>
-            <artifactId>jackson-core-asl</artifactId>
-            <groupId>org.codehaus.jackson</groupId>
-          </org.apache.maven.model.Exclusion>
-        </exclusions>
+        <exclusions/>
         <optional>false</optional>
       </dependency>
       <targetFileName>jackson-mapper-asl-1.9.12.jar</targetFileName>

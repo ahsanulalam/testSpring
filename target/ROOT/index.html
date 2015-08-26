@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
 <html>
   <head>
+      <meta charset="utf-8"/>
     <title>Spring MVC - Ajax</title>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <style>
@@ -76,11 +77,11 @@
 			});
 
 			// Save Person AJAX Form Submit
-			$('#randomPerson').click(function() {
-				$.getJSON('http://springrest.cleverapps.io/api/person/', function(person) {
+			/*$('#randomPerson').click(function() {
+				$.getJSON('http://192.168.1.229:8080/api/person/', function(person) {
 					$('#personResponse').text(person.name + ', age ' + person.age);
 				});
-			});
+			});*/
 
 			$('#newPersonForm').submit(function(e) {
 				// will pass the form date using the jQuery serialize function
